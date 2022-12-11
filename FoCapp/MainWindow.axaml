@@ -1,0 +1,25 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:webview="clr-namespace:WebViewControl;assembly=WebViewControl.Avalonia"
+        xmlns:local="clr-namespace:FoCapp"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="FoCapp.MainWindow"
+        Title="FoCapp"
+        ExtendClientAreaToDecorationsHint="False"
+        ExtendClientAreaChromeHints="NoChrome"
+        TransparencyLevelHint="Transparent"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        WindowState="Normal"
+        CornerRadius="15"
+        ClipToBounds="True"
+        HasSystemDecorations="False">
+    <Grid ClipToBounds="False">
+        <Border CornerRadius="15" Background="Black" ClipToBounds="True">
+            <webview:WebView Address="https://ru.stackoverflow.com/" ClipToBounds="False"/>
+        </Border>
+        <local:MainMenu></local:MainMenu>
+    </Grid>
+</Window>

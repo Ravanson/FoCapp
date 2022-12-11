@@ -1,0 +1,53 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="FoCapp.MainMenu">
+    <UserControl.Resources>
+        <Style x:Key="PBar" Selector="ProgressBar">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Grid>
+                            <Border x:Name="PART_Track" CornerRadius="7" Background="Transparent" HorizontalAlignment="Stretch"/>
+                            <Grid>
+                                <Grid.Background>
+                                    <VisualBrush Visual="{Binding ElementName=PART_Track}"/>
+                                </Grid.Background>
+                                <Border x:Name="PART_Indicator" CornerRadius="7" Background="{TemplateBinding Background}" HorizontalAlignment="Left"/>
+                            </Grid>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Border x:Name="PB_IsGameReady" 
+                CornerRadius="7" 
+                Width="900" 
+                Height="68" 
+                Background="#11FFFFFF" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Bottom"
+                Margin="0,0,0,30">
+            
+                <Grid Width="900" Height="75">
+                    <ProgressBar Styles="{StaticResource PBar}" Value="30" Background="#5896FF" Height="68" Width="900"/>
+                    <TextBlock Text="Игра готова к запуску" FontSize="18" FontFamily="Gilroy Bold" Foreground="White" Margin="75,18,228,28" />
+                    <TextBlock Text="Последнее обновление:" FontSize="13" FontFamily="Gilroy Medium" Foreground="White" Margin="75,43,221,12"/>
+                    <TextBlock Text="30.08.2022" FontSize="13" FontFamily="Gilroy Medium" Foreground="White" Margin="226,43,609,12"/>
+
+                    <Border CornerRadius="7" Background="#16FFFFFF" Width="38" Height="38" Margin="20,15,842,15">
+                        
+                    </Border>
+
+
+                </Grid>
+            </Border>
+
+            
+    </Grid>
+</UserControl>
